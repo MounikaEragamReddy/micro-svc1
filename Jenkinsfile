@@ -19,8 +19,8 @@ pipeline {
                 sh '''
                 # apply kubectl
                 cd k8s/
-                kubectl get nodes
-                kubectl apply -f .
+                /var/lib/jenkins/bin/kubectl get pods
+                /var/lib/jenkins/bin/kubectl apply -f .
                 '''
             }
         }
