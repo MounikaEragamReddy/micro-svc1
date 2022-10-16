@@ -19,6 +19,7 @@ pipeline {
                 sh '''
                 # apply kubectl
                 cd k8s/
+                kubectl get  pods
                 kubectl apply -f deployment.yaml service.yaml ingress.yaml namespace.yaml
                 '''
             }
