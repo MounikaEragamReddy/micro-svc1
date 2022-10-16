@@ -19,7 +19,7 @@ pipeline {
                 sh '''
                 # apply kubectl
                 cd k8s/
-                /var/lib/jenkins/bin/kubectl get pods
+                sed -i 's/TAG/$BUILD_NUMBER/g' deployment.yaml
                 /var/lib/jenkins/bin/kubectl apply -f .
                 '''
             }
