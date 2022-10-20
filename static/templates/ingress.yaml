@@ -79,6 +79,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: release-name-static
+                name: app2-chart-static
                 port:
                   number: 80
