@@ -72,13 +72,13 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
 spec:
   rules:
-    - host: dev.apishopping.com
+    - host: dev.apishopping.in
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: static-dev
+                name: release-name-static
                 port:
                   number: 80

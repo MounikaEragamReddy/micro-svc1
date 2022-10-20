@@ -18,10 +18,11 @@ pipeline {
             steps {
                 sh '''
                 # apply kubectl
-                kubectl get nodes
+                /var/lib/jenkins/bin/kubectl get nodes
                 #cd k8s/
                 #sed -i 's/TAG/$BUILD_NUMBER/g' deployment.yaml
                 #/var/lib/jenkins/bin/kubectl apply -f .
+                helm upgrade -i app2-chart static
                 '''
             }
         }
