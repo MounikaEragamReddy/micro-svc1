@@ -3,12 +3,12 @@
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
-
+namespace: dev
 image:
-  repository: nginx
+  repository: 496501836491.dkr.ecr.ap-southeast-1.amazonaws.com/static-apache
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -80,3 +80,4 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
