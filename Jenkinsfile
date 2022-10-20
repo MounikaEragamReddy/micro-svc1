@@ -18,9 +18,10 @@ pipeline {
             steps {
                 sh '''
                 # apply kubectl
-                cd k8s/
-                sed -i 's/TAG/$BUILD_NUMBER/g' deployment.yaml
-                /var/lib/jenkins/bin/kubectl apply -f .
+                kubectl get nodes
+                #cd k8s/
+                #sed -i 's/TAG/$BUILD_NUMBER/g' deployment.yaml
+                #/var/lib/jenkins/bin/kubectl apply -f .
                 '''
             }
         }
