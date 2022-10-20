@@ -22,7 +22,7 @@ pipeline {
                 #cd k8s/
                 #sed -i 's/TAG/$BUILD_NUMBER/g' deployment.yaml
                 #/var/lib/jenkins/bin/kubectl apply -f .
-                helm upgrade -i app2-chart static
+                helm upgrade -i app2-chart static -n dev
                 '''
             }
         }
