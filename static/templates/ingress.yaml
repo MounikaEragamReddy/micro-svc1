@@ -72,7 +72,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
 spec:
   rules:
-    - host: dev.apishopping.in
+    - host: {{ .Values.ingressUrl }}
       http:
         paths:
           - path: /

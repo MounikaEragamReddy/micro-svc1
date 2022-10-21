@@ -4,6 +4,7 @@
 
 replicaCount: 1
 namespace: dev
+ingressUrl: dev.apishopping.in
 image:
   repository: 496501836491.dkr.ecr.ap-southeast-1.amazonaws.com/static-apache
   pullPolicy: IfNotPresent
