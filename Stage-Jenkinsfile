@@ -17,7 +17,7 @@ pipeline {
         stage('EKS deploy') {
             steps {
                 sh '''
-                helm upgrade -i app2-chart static -n stage
+                helm upgrade -i app2-chart static -n stage -f stage-values.yaml
                 '''
             }
         }
